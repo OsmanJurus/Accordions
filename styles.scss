@@ -1,0 +1,81 @@
+// SCSS variables!
+$bgc: #000;
+$color-1: #fff;
+$color-2: red;
+
+// Template!
+@mixin common() {
+}
+
+@mixin flex($jus, $ali) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  body {
+    @include flex(center, null);
+    width: 100%;
+    min-height: 100vh;
+    background-color: $bgc;
+    color: $color-1;
+    font-family: "poppins";
+  }
+}
+
+.container {
+  width: 80%;
+  @media (min-width: 800px) {
+    width: 50%;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "roboto";
+    margin: 30px 0;
+  }
+
+  .accordion {
+    @include flex(space-between, null);
+
+    border-bottom: 2px solid;
+    font-size: 22px;
+    letter-spacing: 5px;
+    margin-bottom: 2px 0;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 1s;
+
+    &:hover {
+      color: $color-2;
+    }
+  }
+
+  .panel {
+    font-family: "poppins";
+    line-height: 25px;
+    padding: 5px 0;
+    font-size: 16px;
+    transition: all ease-in-out 1s;
+
+    // make it hidden!
+    max-height: 0px;
+    overflow: hidden;
+
+    p {
+      text-align: justify;
+      margin: 10px 0 10px 20px;
+    }
+  }
+}
+
+.open {
+  color: $color-2;
+}

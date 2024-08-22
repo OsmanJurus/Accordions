@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: "poppins";
+}
+
+.container {
+  width: 80%;
+}
+@media (min-width: 800px) {
+  .container {
+    width: 50%;
+  }
+}
+.container h1 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "roboto";
+  margin: 30px 0;
+}
+.container .accordion {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  font-size: 22px;
+  letter-spacing: 5px;
+  margin-bottom: 2px 0;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 1s;
+}
+.container .accordion:hover {
+  color: red;
+}
+.container .panel {
+  font-family: "poppins";
+  line-height: 25px;
+  padding: 5px 0;
+  font-size: 16px;
+  transition: all ease-in-out 1s;
+  max-height: 0px;
+  overflow: hidden;
+}
+.container .panel p {
+  text-align: justify;
+  margin: 10px 0 10px 20px;
+}
+
+.open {
+  color: red;
+}/*# sourceMappingURL=styles.css.map */
